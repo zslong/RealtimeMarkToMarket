@@ -9,6 +9,6 @@ spring:
     sql-script-encoding: UTF-8
   jpa:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-    hibernate.ddl: none
+    hibernate.ddl-auto: none
   h2:
     console.enabled: true

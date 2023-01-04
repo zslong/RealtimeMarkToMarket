@@ -1,6 +1,7 @@
 package me.interview.RealTimeMarkToMarket.DAO;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -15,4 +16,5 @@ public class UnderlierCategory {
 
     @Column
     private String name;
+
 }
