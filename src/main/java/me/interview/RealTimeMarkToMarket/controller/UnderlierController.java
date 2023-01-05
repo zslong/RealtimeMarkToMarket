@@ -1,9 +1,9 @@
-package me.interview.RealTimeMarkToMarket.Controller;
+package me.interview.RealTimeMarkToMarket.controller;
 
-import me.interview.RealTimeMarkToMarket.DAO.Underlier;
-import me.interview.RealTimeMarkToMarket.DAO.UnderlierCategory;
-import me.interview.RealTimeMarkToMarket.Repository.UnderlierCategoryRepository;
-import me.interview.RealTimeMarkToMarket.Repository.UnderlierRepository;
+import me.interview.RealTimeMarkToMarket.model.Underlier;
+import me.interview.RealTimeMarkToMarket.model.UnderlierCategory;
+import me.interview.RealTimeMarkToMarket.repository.UnderlierCategoryRepository;
+import me.interview.RealTimeMarkToMarket.repository.UnderlierRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class UnderlierCategoryController {
-    private static Logger logger = LoggerFactory.getLogger(UnderlierCategoryController.class);
+public class UnderlierController {
+    private static Logger logger = LoggerFactory.getLogger(UnderlierController.class);
     @Autowired
     private UnderlierCategoryRepository underlierCategoryRepository;
 

@@ -1,10 +1,8 @@
-package me.interview.RealTimeMarkToMarket.DAO;
+package me.interview.RealTimeMarkToMarket.model;
 
 import lombok.Data;
-import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "UNDERLIER_CATEGORY")

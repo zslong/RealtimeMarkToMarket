@@ -1,6 +1,6 @@
-package me.interview.RealTimeMarkToMarket.Repository;
+package me.interview.RealTimeMarkToMarket.repository;
 
-import me.interview.RealTimeMarkToMarket.DAO.UnderlierCategory;
+import me.interview.RealTimeMarkToMarket.model.UnderlierCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
