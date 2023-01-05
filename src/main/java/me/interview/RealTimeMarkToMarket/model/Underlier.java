@@ -2,10 +2,7 @@ package me.interview.RealTimeMarkToMarket.DAO;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -15,7 +12,9 @@ public class Underlier {
     private long id;
 
     private String code;
-    private long categoryId;
-    private String categoryName;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "category_id")
+    private UnderlierCategory underlierCategory;
 
 }
