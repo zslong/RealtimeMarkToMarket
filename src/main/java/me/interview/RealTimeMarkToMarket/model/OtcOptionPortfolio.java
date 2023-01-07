@@ -3,11 +3,13 @@ package me.interview.RealTimeMarkToMarket.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.List;
 
-@Entity
-@Table(name = "UNDERLIER_CATEGORY")
 @Data
-public class UnderlierCategory {
+@Entity
+@Table(name = "OTC_OPTION_PORTFOLIO")
+public class OtcOptionPortfolio {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -16,4 +18,6 @@ public class UnderlierCategory {
     @Column(name = "name")
     private String name;
 
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "portfolioList")
+    private List<OtcOptionContract> contractList;
 }

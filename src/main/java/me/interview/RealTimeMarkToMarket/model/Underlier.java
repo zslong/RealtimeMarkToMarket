@@ -13,7 +13,7 @@ public class Underlier {
 
     private String code;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "category_id")
     private UnderlierCategory underlierCategory;
 
