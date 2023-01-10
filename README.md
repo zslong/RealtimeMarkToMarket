@@ -10,6 +10,61 @@
 * **ul:** 标的
 * **pg:** 产品名称
 
+## 返回信息样例
+按照投资组合与标的查询
+```
+[{"name":"全量合约",
+  "delta":1.60,
+  "gamma":20.63,
+  "vega":218.32,
+  "dailyPnL":2664.46,
+  "subDimensions":[{"name":"1B0300.SH",
+                    "delta":0.20,
+                    "gamma":1.56,
+                    "vega":13.38,
+                    "dailyPnL":548.92},
+                   {"name":"000905.SH",
+                    "delta":1.00,
+                    "gamma":8.93,
+                    "vega":72.36,
+                    "dailyPnL":1257.74},
+                   {"name":"IF2212.CFE",
+                    "delta":0.00,
+                    "gamma":4.24,
+                    "vega":48.80,
+                    "dailyPnL":768.84},
+                   {"name":"IC2212.CFE",
+                    "delta":0.40,
+                    "gamma":5.90,
+                    "vega":83.78,
+                    "dailyPnL":88.96}]},
+ {"name":"投资组合A",
+  "delta":1.00,
+  "gamma":8.93,
+  "vega":72.36,
+  "dailyPnL":1257.74,
+  "subDimensions":[{"name":"000905.SH",
+                    "delta":1.00,
+                    "gamma":8.93,
+                    "vega":72.36,
+                    "dailyPnL":1257.74}]},
+ {"name":"投资组合B",
+  "delta":1.00,
+  "gamma":4.28,
+  "vega":34.24,
+  "dailyPnL":1059.17,
+  "subDimensions":[{"name":"1B0300.SH",
+                    "delta":0.20,
+                    "gamma":1.56,
+                    "vega":13.38,
+                    "dailyPnL":548.92},
+                   {"name":"000905.SH",
+                    "delta":0.80,
+                    "gamma":2.72,
+                    "vega":20.86,
+                    "dailyPnL":510.25}]
+ }]
+```
 多维度查询时可将维度缩写通过`;`拼接。维度参数顺序可任意，但最终显示会按照维度的高低顺序进行聚合显示
 # 项目结构
 项目采用`SpringBoot+Gradle`开发搭建。数据库选择`H2`内存数据库，因为其轻量并且方便修改测试等特性。
