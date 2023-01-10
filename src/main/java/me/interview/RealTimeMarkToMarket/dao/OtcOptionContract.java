@@ -1,12 +1,10 @@
-package me.interview.RealTimeMarkToMarket.model;
+package me.interview.RealTimeMarkToMarket.dao;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.List;
 
 @Data
 @Entity
@@ -44,11 +42,12 @@ public class OtcOptionContract {
     @Column(name = "status")
     private char status;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name="portfolio_contract",
-    joinColumns = {@JoinColumn(name = "contract_num")},
-    inverseJoinColumns = {@JoinColumn(name = "portfolio_id")})
-    @JsonIgnore // add this JsonIgnore annotation to avoid jackson cyclic reference
-    private List<OtcOptionPortfolio> portfolioList;
+    public OtcOptionContract(){}
 
+    public OtcOptionContract(String contractNum, Underlier underlier, String optionProduct, char status) {
+        this.contractNum = contractNum;
+        this.underlier = underlier;
+        this.optionProduct = optionProduct;
+        this.status = status;
+    }
 }

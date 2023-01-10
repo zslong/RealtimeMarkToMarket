@@ -1,4 +1,4 @@
-package me.interview.RealTimeMarkToMarket.model;
+package me.interview.RealTimeMarkToMarket.dao;
 
 import lombok.Data;
 

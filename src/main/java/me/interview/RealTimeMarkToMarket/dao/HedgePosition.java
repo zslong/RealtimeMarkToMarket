@@ -1,4 +1,4 @@
-package me.interview.RealTimeMarkToMarket.model;
+package me.interview.RealTimeMarkToMarket.dao;
 
 import lombok.Data;
 
@@ -28,4 +28,11 @@ public class HedgePosition {
 
     @Column(name = "delta")
     private BigDecimal delta;
+
+    public HedgePosition() {}
+
+    public HedgePosition(String hedgeNum, Underlier underlier) {
+        this.hedgeNum = hedgeNum;
+        this.underlier = underlier;
+    }
 }
